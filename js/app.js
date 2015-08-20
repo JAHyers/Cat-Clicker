@@ -6,6 +6,22 @@ var ViewModel = function(){
    this.incrementCounter = function(){
       this.clickCount(this.clickCount() + 1);
    };
+
+   this.catNewborn = ko.observable('Newborn');
+   this.catInfant = ko.observable('Infant');
+   this.catTeen = ko.observable('Teen');
+
+   this.catLevel = ko.computed(function(){
+      if (this.clickCount() <= 10){
+         return this.catNewborn();
+      }
+      else if (this.clickCount() <= 19 ) {
+         return this.catInfant();
+      }
+      else if (this.clickCount() >= 20){
+         return this.catTeen();
+      }
+   }, this)
 }
 
 ko.applyBindings(new ViewModel());

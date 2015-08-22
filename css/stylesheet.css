@@ -7,3 +7,21 @@
    width: 350px;
    height:250px;
 }
+.left{
+   background-color: #272B2B;
+   color:white;
+}
+.center{
+   background-color: #528782;
+   color:white;
+}
+.right{
+   background-color: #272B2B;
+   color:white;
+}
+.left, .center, .right{
+   height:450px;
+}
+.level{
+   color:orange;
+}
